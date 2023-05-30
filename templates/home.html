@@ -11,17 +11,26 @@
   <style>
     #banner{
       height: 360px;
-      object: fit cover;
+      object-fit: cover;
       width:100%;
+      margin-bottom: 16px;
     }
   </style>
   <body>
-
+    {% include 'navbar.html' %}
+    <img class="img-fluid" id = "banner" src="https://recruitin-careers-website--code-csaurav8.repl.co/static/banner.jpg">
     <div class="container">
       <h1 class="text-center mt-2 mb-4">{{title}}</h1>
-    <img class="img-fluid" id = "banner" src="https://recruitin-careers-website--code-csaurav8.repl.co/static/banner.jpg">
     <h2 class="text-center mt-2 mb-4">About us</h2>
+      <div class="row">
+      <div class="col-md-6"> 
+      
   <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla consequat sem ultricies ex molestie ullamcorper. Phasellus placerat blandit eros, ultricies lacinia diam pretium ac. Nam vel neque in erat dictum rutrum nec sit amet ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce at viverra justo. Proin eget justo in est ultricies auctor. Nulla mollis tempor eros non tempor. Nullam in lorem sodales, placerat odio vel, mollis mi. Pellentesque consectetur convallis justo at efficitur.</p>
+      </div>
+        <div class="d-none d-md-block col-md-6" style="margin-bottom: 16px">
+          <img src="/static/picAside.jpg" style="height: 360px; width:100%; object-fit:cover">
+        </div>
+    </div>
 
   <h2 class="text-center mt-2 mb-4">Job openings</h2>
   <p>
@@ -32,10 +41,9 @@
     {% endfor %}
   <p>
   <div class="text-center">
-  <button type="button" class="btn btn-primary btn-lg"> Contact us</button>
-    <p class = "mt-4">Copyright 2023, recruitin</p>
+  <a href="mailto:code.csaurav8@gmail.com?subject=Question%20about%20job%20openings&body=My%20Name%3A%20%3Cyour%20name%20here%3E%0D%0AMy%20Question%3A%20%3Center%20your%20question%20here%3E%0D%0A" type="button" class="btn btn-primary btn-lg"> Contact us</a>
     </div>
-    
+    {% include 'footer.html' %}
   </body>
   
 </html>
